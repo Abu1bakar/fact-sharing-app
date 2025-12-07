@@ -14,8 +14,10 @@
   </head>
   <body>
     <header class="header">
-      <img src="Fact.png" alt="Today I Learned Logo" width="68" height="68" />
-      <h1>Today I Learned</h1>
+      <div class="logo">
+        <img src="Fact.png" alt="Today I Learned Logo" width="68" height="68" />
+        <h1>Today I Learned</h1>
+      </div>
       <button>Share a fact</button>
     </header>
 
@@ -47,12 +49,24 @@
             <p>
               React is being developed by Meta (formerly facebook)
               <a href="https://opensource.fb.com/" target="_blank">(Source)</a>
-              <span class="tag">#Technology#</span>
+              <span class="tag" style="background-color: #a3d9ff"
+                >#Technology#</span
+              >
             </p>
             <div>
-              <button>👍<strong>24</strong></button>
-              <button>🤯 <strong>11</strong></button>
-              <button>⛔️ <strong>3</strong></button>
+              <button>
+                <img class="icons" src="Upvote.png" alt="Upvote" /><strong
+                  >24</strong
+                >
+              </button>
+              <button>
+                <img class="icons" src="Mindblowing.png" alt="Mindblowing" />
+                <strong>11</strong>
+              </button>
+              <button>
+                <img class="icons" src="Downvote.png" alt="Downvote" />
+                <strong>3</strong>
+              </button>
             </div>
           </li>
           <li class="fact">
@@ -65,12 +79,24 @@
                 target="_blank"
                 >(Source)</a
               >
-              <span class="tag">#Socity#</span>
+              <span class="tag" style="background-color: #f7c7a3"
+                >#Socity#</span
+              >
             </p>
             <div>
-              <button>👍<strong>11</strong></button>
-              <button>🤯 <strong>2</strong></button>
-              <button>⛔️ <strong>0</strong></button>
+              <button>
+                <img class="icons" src="Upvote.png" alt="Upvote" /><strong
+                  >11</strong
+                >
+              </button>
+              <button>
+                <img class="icons" src="Mindblowing.png" alt="Mindblowing" />
+                <strong>2</strong>
+              </button>
+              <button>
+                <img class="icons" src="Downvote.png" alt="Downvote" />
+                <strong>0</strong>
+              </button>
             </div>
           </li>
         </ul>

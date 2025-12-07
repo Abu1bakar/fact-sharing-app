@@ -13,12 +13,22 @@ body {
 
 .header {
   margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .fact-form {
   background-color: #111410;
   margin-bottom: 40px;
   padding: 16px 40px;
+  text-align: center;
 }
 
 h1 {
@@ -39,12 +49,19 @@ h1 {
   border: 4px solid rgb(76, 76, 76);
 }
 
+.icons {
+  width: 16px;
+  height: auto;
+}
+
 .tag {
   text-transform: uppercase;
   font-size: 16px;
   font-family: inter, Arial, sans-serif;
   font-weight: 600;
   font-style: italic;
+  padding: 3px 10px;
+  color: #222831;
 }
 
 ul {
