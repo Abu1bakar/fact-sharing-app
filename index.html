@@ -13,94 +13,118 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="logo">
-        <img src="Fact.png" alt="Today I Learned Logo" width="68" height="68" />
-        <h1>Today I Learned</h1>
-      </div>
-      <button>Share a fact</button>
-    </header>
+    <div class="container">
+      <header class="header">
+        <div class="logo">
+          <img src="Fact.png" alt="Today I Learned Logo" />
+          <h1>Today I Learned</h1>
+        </div>
+        <button class="btn btn-large">Share a fact</button>
+      </header>
 
-    <form class="fact-form">
-      <input type="text" placeholder="Share a fact with the world..." />
-      <span>200</span>
-      <input type="text" placeholder="Trustworthy Source..." />
-      <select>
-        <option value="">Choose Category:</option>
-        <option value="technology">Technology</option>
-        <option value="science">Science</option>
-        <option value="finance">Finance</option>
-      </select>
-      <button>Post</button>
-    </form>
+      <form class="fact-form">
+        <input type="text" placeholder="Share a fact with the world..." />
+        <span>200</span>
+        <input type="text" placeholder="Trustworthy Source..." />
+        <select>
+          <option value="">Choose Category:</option>
+          <option value="technology">Technology</option>
+          <option value="science">Science</option>
+          <option value="finance">Finance</option>
+        </select>
+        <button class="btn btn-large">Post</button>
+      </form>
 
-    <main>
-      <aside>
-        <ul>
-          <li><button>All</button></li>
-          <li><button>Technology</button></li>
-          <li><button>Science</button></li>
-        </ul>
-      </aside>
+      <main class="main">
+        <aside>
+          <ul>
+            <li class="category">
+              <button class="btn btn-all-categories">All</button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #1e3a4d"
+              >
+                Technology
+              </button>
+            </li>
+            <li class="category">
+              <button
+                class="btn btn-category"
+                style="background-color: #5a3e2e"
+              >
+                Science
+              </button>
+            </li>
+          </ul>
+        </aside>
 
-      <section>
-        <ul>
-          <li class="fact">
-            <p>
-              React is being developed by Meta (formerly facebook)
-              <a href="https://opensource.fb.com/" target="_blank">(Source)</a>
-              <span class="tag" style="background-color: #a3d9ff"
+        <section>
+          <ul>
+            <li class="fact">
+              <p>
+                React is being developed by Meta (formerly facebook)
+                <a
+                  class="sourse"
+                  href="https://opensource.fb.com/"
+                  target="_blank"
+                  >(Source)</a
+                >
+              </p>
+              <span class="tag" style="background-color: #1e3a4d"
                 >#Technology#</span
               >
-            </p>
-            <div>
-              <button>
-                <img class="icons" src="Upvote.png" alt="Upvote" /><strong
-                  >24</strong
+              <div class="vote-buttons">
+                <button>
+                  <img class="icons" src="Upvote.png" alt="Upvote" /><strong
+                    >24</strong
+                  >
+                </button>
+                <button>
+                  <img class="icons" src="Mindblowing.png" alt="Mindblowing" />
+                  <strong>11</strong>
+                </button>
+                <button>
+                  <img class="icons" src="Downvote.png" alt="Downvote" />
+                  <strong>3</strong>
+                </button>
+              </div>
+            </li>
+            <li class="fact">
+              <p>
+                Millennial dads spend 3 times as much time with their kids than
+                their fathers spent with them. In 1982, 43% of fathers had never
+                changed a diaper. Today, that number is down to 3%
+                <a
+                  class="sourse"
+                  href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
+                  target="_blank"
+                  >(Source)</a
                 >
-              </button>
-              <button>
-                <img class="icons" src="Mindblowing.png" alt="Mindblowing" />
-                <strong>11</strong>
-              </button>
-              <button>
-                <img class="icons" src="Downvote.png" alt="Downvote" />
-                <strong>3</strong>
-              </button>
-            </div>
-          </li>
-          <li class="fact">
-            <p>
-              Millennial dads spend 3 times as much time with their kids than
-              their fathers spent with them. In 1982, 43% of fathers had never
-              changed a diaper. Today, that number is down to 3%
-              <a
-                href="https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids"
-                target="_blank"
-                >(Source)</a
-              >
-              <span class="tag" style="background-color: #f7c7a3"
+              </p>
+              <span class="tag" style="background-color: #5a3e2e"
                 >#Socity#</span
               >
-            </p>
-            <div>
-              <button>
-                <img class="icons" src="Upvote.png" alt="Upvote" /><strong
-                  >11</strong
-                >
-              </button>
-              <button>
-                <img class="icons" src="Mindblowing.png" alt="Mindblowing" />
-                <strong>2</strong>
-              </button>
-              <button>
-                <img class="icons" src="Downvote.png" alt="Downvote" />
-                <strong>0</strong>
-              </button>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
+              <div class="vote-buttons">
+                <button>
+                  <img class="icons" src="Upvote.png" alt="Upvote" /><strong
+                    >11</strong
+                  >
+                </button>
+                <button>
+                  <img class="icons" src="Mindblowing.png" alt="Mindblowing" />
+                  <strong>2</strong>
+                </button>
+                <button>
+                  <img class="icons" src="Downvote.png" alt="Downvote" />
+                  <strong>0</strong>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
