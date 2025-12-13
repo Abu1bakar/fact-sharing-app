@@ -1,5 +1,8 @@
 const btn = document.querySelector('.btn-open');
 const form = document.querySelector('.fact-form');
+const factslist = document.querySelector('.facts-list');
+
+factslist.innerHTML = '';
 
 btn.addEventListener('click', function () {
   if (form.classList.contains('hidden')) {
@@ -95,7 +98,7 @@ console.log(userUpdates);
 
 console.log(userUpdates[3]);
 
-*/
+
 
 const factObj = {
   text: 'Tiktok Is The Fastest Growing Business Booster as of 2025 ',
@@ -118,3 +121,79 @@ console.log(createdIn);
 console.log(isCorrect);
 
 console.log(factObj.currentSummary());
+
+// [2, 4, 6, 8].forEach(function (el) {
+//   console.log(el);
+// });
+
+// const times10 = [2, 4, 6, 8].map(function (el) {
+//   return el * 10;
+// });
+
+const times10 = [2, 4, 6, 8].map((el) => el * 10);
+console.log(times10);
+
+const names = ['Adam', 'Emily', 'Lily', 'Hamza'].map((n) => n.toUpperCase());
+console.log(names);
+
+const CATEGORIES = [
+  { name: 'technology', color: '#1E3A4D' },
+  { name: 'science', color: '#16a34a' },
+  { name: 'finance', color: '#2E4A36' },
+  { name: 'society', color: '#5A3E2E' },
+  { name: 'entertainment', color: '#4A2C33' },
+  { name: 'health', color: '#2F4B43' },
+  { name: 'history', color: '#3E3750' },
+  { name: 'news', color: '#4D3E14' },
+];
+
+const allCategories = CATEGORIES.map((el) => el.name);
+console.log(allCategories);
+
+const initialFacts = [
+  {
+    id: 1,
+    text: 'React is being developed by Meta (formerly facebook)',
+    source: 'https://opensource.fb.com/',
+    category: 'technology',
+    votesInteresting: 24,
+    votesMindblowing: 9,
+    votesFalse: 4,
+    createdIn: 2021,
+  },
+  {
+    id: 2,
+    text: 'Millennial dads spend 3 times as much time with their kids than their fathers spent with them. In 1982, 43% of fathers had never changed a diaper. Today, that number is down to 3%',
+    source:
+      'https://www.mother.ly/parenting/millennial-dads-spend-more-time-with-their-kids',
+    category: 'society',
+    votesInteresting: 11,
+    votesMindblowing: 2,
+    votesFalse: 0,
+    createdIn: 2019,
+  },
+  {
+    id: 3,
+    text: 'Lisbon is the capital of Portugal',
+    source: 'https://en.wikipedia.org/wiki/Lisbon',
+    category: 'society',
+    votesInteresting: 8,
+    votesMindblowing: 3,
+    votesFalse: 1,
+    createdIn: 2015,
+  },
+];
+
+function calcFactAge(year) {
+  const currentYear = new Date().getFullYear();
+  const age = currentYear - year;
+
+  if (age >= 0) return age;
+  else
+    return `Impossible year, Needs to be equal to or less then ${currentYear}`;
+}
+
+const factAge = initialFacts.map((el) => calcFactAge(el.createdIn));
+console.log(factAge);
+console.log(factAge.join(' & '));
+*/
