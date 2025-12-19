@@ -13,7 +13,7 @@ body {
   padding: 48px 64px;
 }
 
-.container {
+#root {
   max-width: 1500px;
   margin: 0 auto;
 }
@@ -259,4 +259,9 @@ ul {
   .fact-form select {
     width: auto;
   }
+}
+
+.fact-length {
+  color: #111410;
+  font-weight: 700;
 }
