@@ -1,15 +1,5 @@
+import { useState } from 'react';
 import './style.css';
-
-const CATEGORIES = [
-  { name: 'technology', color: '#1E3A4D' },
-  { name: 'science', color: '#16a34a' },
-  { name: 'finance', color: '#2E4A36' },
-  { name: 'society', color: '#5A3E2E' },
-  { name: 'entertainment', color: '#4A2C33' },
-  { name: 'health', color: '#2F4B43' },
-  { name: 'history', color: '#3E3750' },
-  { name: 'news', color: '#4D3E14' },
-];
 
 const initialFacts = [
   {
@@ -45,6 +35,18 @@ const initialFacts = [
   },
 ];
 
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <span style={{ fontSize: '40px' }}>{count}</span>
+      <button className="btn btn-large" onClick={() => setCount((c) => c + 1)}>
+        +1
+      </button>
+    </div>
+  );
+}
+
 function App() {
   const appTitle = 'Today I Learned';
   return (
@@ -56,6 +58,7 @@ function App() {
         </div>
         <button className="btn btn-large btn-open">Share a fact</button>
       </header>
+      <Counter />
       <NewFactForm />
       <main className="main">
         <CategoryFilter />
@@ -69,8 +72,37 @@ function NewFactForm() {
   return <form className="fact-form">Fact Form</form>;
 }
 
+const CATEGORIES = [
+  { name: 'technology', color: '#1E3A4D' },
+  { name: 'science', color: '#16a34a' },
+  { name: 'finance', color: '#2E4A36' },
+  { name: 'society', color: '#5A3E2E' },
+  { name: 'entertainment', color: '#4A2C33' },
+  { name: 'health', color: '#2F4B43' },
+  { name: 'history', color: '#3E3750' },
+  { name: 'news', color: '#4D3E14' },
+];
+
 function CategoryFilter() {
-  return <aside>Category Filter</aside>;
+  return (
+    <aside>
+      <ul>
+        <li className="category">
+          <button className="btn btn-all-categories">All</button>
+        </li>
+        {CATEGORIES.map((cat) => (
+          <li key={cat.name} className="category">
+            <button
+              className="btn btn-category"
+              style={{ backgroundColor: cat.color }}
+            >
+              {cat.name}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </aside>
+  );
 }
 
 function FactLists() {
