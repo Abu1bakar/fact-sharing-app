@@ -35,36 +35,37 @@ const initialFacts = [
   },
 ];
 
-function Counter() {
-  const [count, setCount] = useState(0);
-  return (
-    <div>
-      <span style={{ fontSize: '40px' }}>{count}</span>
-      <button className="btn btn-large" onClick={() => setCount((c) => c + 1)}>
-        +1
-      </button>
-    </div>
-  );
-}
-
 function App() {
-  const appTitle = 'Today I Learned';
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <>
-      <header className="header">
-        <div className="logo">
-          <img src="Fact.png" alt="Today I Learned Logo" />
-          <h1>{appTitle}</h1>
-        </div>
-        <button className="btn btn-large btn-open">Share a fact</button>
-      </header>
-      <Counter />
-      <NewFactForm />
+      <Header showForm={showForm} setShowForm={setShowForm} />
+      {showForm ? <NewFactForm /> : null}
       <main className="main">
         <CategoryFilter />
         <FactLists />
       </main>
     </>
+  );
+}
+
+function Header({ showForm, setShowForm }) {
+  const appTitle = 'Today I Learned';
+
+  return (
+    <header className="header">
+      <div className="logo">
+        <img src="Fact.png" alt="Today I Learned Logo" />
+        <h1>{appTitle}</h1>
+      </div>
+      <button
+        className="btn btn-large btn-open"
+        onClick={() => setShowForm((show) => !show)}
+      >
+        {showForm ? 'Close' : 'Share A Fact'}
+      </button>
+    </header>
   );
 }
 
